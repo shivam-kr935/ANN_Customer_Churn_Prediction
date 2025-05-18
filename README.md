@@ -1,63 +1,97 @@
-# ANN_Customer_Churn_Prediction
+# 📉 ANN-Based Customer Churn Prediction
 
-ANN_Customer_Churn_Prediction
+This project builds an **Artificial Neural Network (ANN)** model to predict whether a customer will churn (leave a service) or not, using a real-world bank customer dataset. It demonstrates how deep learning models can be used to handle classification problems in customer retention and engagement.
 
-Overview:
-This project implements an Artificial Neural Network (ANN) to predict customer churn based on various customer attributes. The model is trained using the Keras library and is designed to help businesses identify customers who are likely to leave, enabling proactive retention strategies.
+---
 
-Features:
-- Data preprocessing including encoding categorical variables and feature scaling.
-- ANN model built with Keras, trained to predict churn.
-- Model evaluation using appropriate metrics.
-- Deployment-ready code with saved model and encoders.
+## 📌 About the Project
 
-Tech Stack:
-- Python
-- Keras
-- scikit-learn
-- Pandas
-- NumPy
+Customer churn is a critical business metric that can help companies retain valuable users. This project uses an ANN built with **TensorFlow and Keras** to classify customers based on their likelihood of churning.
 
-Project Structure:
-ANN_Customer_Churn_Prediction/
-├── Churn_Modelling.csv           - Dataset used for training and evaluation
-├── app.py                        - Script for deploying the model
-├── experiments.ipynb             - Notebook containing model training and evaluation
-├── prediction.ipynb              - Notebook for making predictions with the trained model
-├── model.h5                      - Saved ANN model
-├── label_encoder_gender.pkl      - Saved label encoder for gender
-├── onehot_encoder_geo.pkl        - Saved one-hot encoder for geography
-├── scaler.pkl                    - Saved scaler for feature scaling
-├── requirements.txt              - Python dependencies
-├── LICENSE                       - Project license
-└── README.md                     - Project documentation
+The model was trained on various features such as credit score, geography, tenure, balance, and activity. After preprocessing and model training, it achieved high accuracy in predicting churn behavior.
 
-Installation Instructions:
-1. Clone the repository:
-   git clone https://github.com/shivam-kr935/ANN_Customer_Churn_Prediction.git
-   cd ANN_Customer_Churn_Prediction
+---
 
-2. Create and activate a virtual environment:
-   python -m venv venv
-   On Windows: venv\Scripts\activate
-   On Mac/Linux: source venv/bin/activate
+## 🧰 Tech Stack
 
-3. Install dependencies:
-   pip install -r requirements.txt
+- **Language:** Python  
+- **Libraries:** TensorFlow, Keras, Pandas, NumPy, Scikit-learn, Matplotlib  
+- **Model:** Artificial Neural Network (Sequential model)  
+- **Data Source:** Bank Customer Churn Dataset
 
-4. Run the application:
-   python app.py
+---
 
-Usage:
-- Use the `experiments.ipynb` notebook to understand the model training process.
-- Use the `prediction.ipynb` notebook to make predictions with the trained model.
-- The `app.py` script can be used to deploy the model for real-time predictions.
+## 📊 Features Used
 
-License:
-This project is licensed under the GPL-2.0 License.
+- Credit Score  
+- Geography  
+- Gender  
+- Age  
+- Tenure  
+- Balance  
+- Number of Products  
+- Has Credit Card  
+- Is Active Member  
+- Estimated Salary
 
-Contributing:
-Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
+---
 
-Contact:
-For any inquiries or support, please contact Shivam Kumar at https://github.com/shivam-kr935.
+## 🚀 How to Run
+
+```bash
+# Clone the repository
+git clone https://github.com/shivam-kr935/ANN_Customer_Churn_Prediction.git
+cd ANN_Customer_Churn_Prediction
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run the main script (example)
+python ann_churn_model.py
+
+📋 Model Performance
+Metric	Value (approx.)
+Accuracy	86%
+Precision	High
+Recall	Balanced
+
+Performance may vary based on random seed, tuning, and train-test split.
+
+📁 Project Structure
+bash
+Copy
+Edit
+.
+├── ann_churn_model.py        # ANN training & evaluation
+├── churn_prediction_model.h5 # Saved model
+├── dataset/                  # Contains Churn_Modelling.csv
+├── requirements.txt
+└── README.md
+🧠 Model Architecture
+Here’s a breakdown of the ANN model used:
+
+Input Layer:
+11 features after encoding categorical variables.
+
+Hidden Layer 1:
+6 neurons, activation = ReLU
+
+Hidden Layer 2:
+6 neurons, activation = ReLU
+
+Output Layer:
+1 neuron, activation = Sigmoid (for binary classification)
+
+Loss Function:
+Binary Crossentropy
+
+Optimizer:
+Adam
+
+Metric:
+Accuracy
+
+👤 Author
+Shivam Kumar
+🔗 LinkedIn
+💻 GitHub
